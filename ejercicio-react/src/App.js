@@ -1,12 +1,16 @@
 
 import './App.css';
-import ContactoListComponent from './components/contacto-list';
+import ContactoComponent from '../src/components/contacto' 
+import { Contacto } from './models/contacto_class';
 
 function App() {
+  const contactoDefault = new Contacto ("Andres", "Ramirez", "aramirezaliste@gmail.com", true);
+
   return (
     <div className="App">
       <header className="App-header">
-        <ContactoListComponent/>
+      <h1>Contacto:</h1>
+        <ContactoComponent info = { contactoDefault }/>
       </header>
     </div>
   );

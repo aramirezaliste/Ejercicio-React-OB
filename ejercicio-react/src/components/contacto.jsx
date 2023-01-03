@@ -2,6 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Contacto } from '../models/contacto_class'
+import EstadoContacto from './estadoContacto'
 
 function ContactoComponent({info}) {
 
@@ -16,9 +17,9 @@ function ContactoComponent({info}) {
         <p> 
             Email: {info.email}
         </p>
-        <p>
-            Estado: {info.conectado ? "Contacto En Línea" : "Contacto No Disponible"}
-        </p>
+    
+         <EstadoContacto conexion = {true} />
+        
     
     </div>
   )
